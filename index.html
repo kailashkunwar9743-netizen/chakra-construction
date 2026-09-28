@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============ SEO META TAGS ============ -->
+  <title>Chakra Construction Pvt. Ltd. | Civil Construction in Banke, Nepal</title>
+  <meta name="description" content="Chakra Construction Pvt. Ltd. — construction and civil engineering services in Baijanath-05, Banke, Nepal. Building construction, foundation work, property valuation and engineering guidance in Kohalpur, Nepalgunj, Dhangadhi and Ghorahi.">
+  <meta property="og:title" content="Chakra Construction Pvt. Ltd.">
+  <meta property="og:description" content="Building Nepal with Strength, Precision &amp; Trust.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo/logo.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#17140F">
+  <!-- Once the site is live, update this to the real URL, e.g.
+       https://chakraconstruction.com.np/ -->
+  <link rel="canonical" href="https://chakraconstruction.com.np/">
+
+  <!-- Favicon uses the company logo -->
+  <link rel="icon" href="assets/logo/logo.jpg">
+
+  <!-- Google Fonts: Barlow Condensed for headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Our own stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ======================================================
+       CINEMATIC INTRO
+       Blueprint lines draw themselves, the logo appears, then the
+       visitor clicks "Enter Project". Shown once per browser session
+       (skipped for reduced-motion visitors). Press Esc to skip.
+  ======================================================= -->
+  <div class="intro" id="intro" role="dialog" aria-label="Welcome to Chakra Construction">
+    <img class="intro-bg" src="assets/photos/hero.jpg" alt="">
+    <svg class="intro-lines" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path pathLength="1" style="--i:0" d="M0 360H800"/>
+      <path pathLength="1" style="--i:1" d="M260 360V220H540V360"/>
+      <path pathLength="1" style="--i:2" d="M260 290H540"/>
+      <path pathLength="1" style="--i:3" d="M240 220L400 140L560 220"/>
+      <path pathLength="1" style="--i:4" d="M260 392H540M260 384V400M540 384V400"/>
+      <path pathLength="1" style="--i:5" d="M120 0V450M680 0V450"/>
+      <path pathLength="1" style="--i:6" d="M0 90H800M0 300H800"/>
+    </svg>
+    <div class="intro-center">
+      <img class="intro-logo" src="assets/logo/logo.jpg" alt="Chakra Construction logo">
+      <p class="intro-title">CHAKRA CONSTRUCTION PVT. LTD.</p>
+      <p class="intro-tag">Don't just see what we build.<br>See how it is built.</p>
+      <button class="btn btn-primary intro-enter" id="introEnter">Enter Project</button>
+    </div>
+  </div>
+  <script>
+    /* Runs immediately so returning visitors never see a flash of the intro */
+    try {
+      if (sessionStorage.getItem('chakra-intro') ||
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.getElementById('intro').remove();
+      } else {
+        document.documentElement.classList.add('intro-open');
+      }
+    } catch (e) { document.getElementById('intro').remove(); }
+  </script>
+
+  <!-- ======================================================
+       NAVIGATION
+       A sticky header with a hamburger menu on mobile.
+       Each link jumps to a section on this same page (#id).
+  ======================================================= -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#home" class="brand">
+        <img src="assets/logo/logo.jpg" alt="Chakra Construction logo" width="38" height="38">
+        <span class="brand-text">CHAKRA<small>CONSTRUCTION PVT. LTD.</small></span>
+      </a>
+
+      <!-- Hamburger button: only visible on mobile, toggled by script.js -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Dark/light mode toggle. script.js swaps the emoji and sets
+           data-theme="light" or "dark" on <html>, and remembers the
+           choice in localStorage for next visit. -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">🌙</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#story">Story</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#projects">Projects</a>
+        <a href="#map">Map</a>
+        <a href="#engineering">Engineering</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#team">Team</a>
+        <a href="#plan">Plan</a>
+        <a href="#contact" class="btn btn-small">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================
+       HOME / HERO SECTION
+  ======================================================= -->
+  <section id="home" class="hero">
+    <img src="assets/photos/hero.jpg" alt="Chakra Construction engineers on a factory floor" class="hero-bg">
+    <!-- Cinematic background video. Hidden on phones and for visitors who
+         prefer reduced motion (the photo above shows instead). To use a
+         different clip, change the src below to another file in assets/videos/ -->
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/photos/hero.jpg">
+      <source src="assets/videos/vid1.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Baijanath-05, Banke, Nepal</p>
+      <h1>CHAKRA CONSTRUCTION<br>PVT. LTD.</h1>
+      <p class="hero-sub hero-slogan">ENGINEERED FOR NEPAL.<br>BUILT FOR GENERATIONS.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">Explore Projects</a>
+        <a href="#plan" class="btn btn-ghost">Start Your Project</a>
+        <a href="https://wa.me/9779802573272" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
+      </div>
+      <a href="#build" class="scroll-cue">Scroll to Build &darr;</a>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       ANIMATED STATISTICS STRIP
+       Numbers count up from 0 the first time this strip
+       scrolls into view (see script.js). Every figure here is
+       a real, countable fact from elsewhere on this page —
+       nothing here is an invented statistic.
+  ======================================================= -->
+  <section class="stats-strip">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="4">0</span>
+        <span class="stat-label">Service Locations</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="7">0</span>
+        <span class="stat-label">Engineering Tools</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="4">0</span>
+        <span class="stat-label">Mixer &amp; Machinery Units</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="3">0</span>
+        <span class="stat-label">Projects Underway</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       BUILD THE PROJECT — SCROLL-DRIVEN BUILDING ANIMATION
+       This section is tall (see .build-section in style.css). The
+       content inside is "sticky", so it stays on screen while you
+       scroll through the section. script.js turns your scroll
+       position into a stage number (0-7) and switches on each part
+       of the drawing (.bld-part) whose data-stage is reached.
+       Clicking a visible part shows what it does.
+       NOTE: this is a general illustration of how a building is
+       built, not a drawing of a specific Chakra project.
+  ======================================================= -->
+  <section id="build" class="build-section">
+    <div class="build-sticky">
+      <div class="container build-grid">
+        <div class="build-text">
+          <p class="kicker">Idea &rarr; Blueprint &rarr; Engineering &rarr; Foundation &rarr; Structure &rarr; Finish &rarr; Complete</p>
+          <h2>Watch a building take shape</h2>
+          <p class="build-stage-name" id="buildStageName">Idea &amp; Blueprint</p>
+          <p class="build-stage-desc" id="buildStageDesc">Every project starts as an idea and a set of drawings, before any ground is broken.</p>
+          <div class="build-progress"><div class="build-progress-fill" id="buildProgressFill"></div></div>
+          <p class="mini-hint">Keep scrolling to build. Tap a part of the building to see what it does.</p>
+          <p class="build-info" id="buildInfo" aria-live="polite"></p>
+        </div>
+
+        <svg class="build-svg" id="buildSvg" viewBox="0 0 400 320" role="img" aria-label="Animated drawing of a two-storey building being constructed stage by stage">
+          <!-- Stage 0: blueprint outline + grid, always visible -->
+          <g class="bld-blueprint">
+            <line x1="20" y1="270" x2="380" y2="270" />
+            <rect x="50" y="110" width="300" height="160" />
+            <polygon points="40,110 200,55 360,110" />
+            <line x1="50" y1="190" x2="350" y2="190" />
+            <line x1="50" y1="298" x2="350" y2="298" class="dim" />
+            <text x="200" y="312" text-anchor="middle">building width</text>
+          </g>
+
+          <!-- Stage 1: foundation -->
+          <g class="bld-part" data-stage="1" data-info="Foundation: carries the whole building's load safely into the ground. We build raft and mat foundations.">
+            <rect x="40" y="270" width="320" height="16" class="f-foundation" />
+          </g>
+          <!-- Stage 2: columns -->
+          <g class="bld-part" data-stage="2" data-info="Columns: vertical members that carry the weight of floors and roof down to the foundation.">
+            <rect x="52" y="112" width="10" height="158" class="f-column" />
+            <rect x="145" y="112" width="10" height="158" class="f-column" />
+            <rect x="245" y="112" width="10" height="158" class="f-column" />
+            <rect x="338" y="112" width="10" height="158" class="f-column" />
+          </g>
+          <!-- Stage 3: beams and slabs -->
+          <g class="bld-part" data-stage="3" data-info="Beams and slabs: beams span between columns and slabs form the floors, spreading loads to the columns.">
+            <rect x="50" y="186" width="300" height="8" class="f-slab" />
+            <rect x="50" y="106" width="300" height="8" class="f-slab" />
+          </g>
+          <!-- Stage 4: walls -->
+          <g class="bld-part" data-stage="4" data-info="Walls: enclose and divide the space, and give the building its shape.">
+            <rect x="62" y="194" width="83" height="76" class="f-wall" />
+            <rect x="155" y="194" width="90" height="76" class="f-wall" />
+            <rect x="255" y="194" width="83" height="76" class="f-wall" />
+            <rect x="62" y="114" width="83" height="72" class="f-wall" />
+            <rect x="155" y="114" width="90" height="72" class="f-wall" />
+            <rect x="255" y="114" width="83" height="72" class="f-wall" />
+          </g>
+          <!-- Stage 5: roof -->
+          <g class="bld-part" data-stage="5" data-info="Roof: protects the structure from weather and completes the building envelope.">
+            <polygon points="40,108 200,55 360,108" class="f-roof" />
+          </g>
+          <!-- Stage 6: finishing -->
+          <g class="bld-part" data-stage="6" data-info="Finishing: doors, windows, plaster and paint that make the building ready to use.">
+            <rect x="182" y="222" width="36" height="48" class="f-door" />
+            <rect x="80" y="210" width="40" height="30" class="f-window" />
+            <rect x="280" y="210" width="40" height="30" class="f-window" />
+            <rect x="80" y="132" width="40" height="30" class="f-window" />
+            <rect x="180" y="132" width="40" height="30" class="f-window" />
+            <rect x="280" y="132" width="40" height="30" class="f-window" />
+          </g>
+          <!-- Stage 7: completed label -->
+          <g class="bld-part" data-stage="7" data-info="Completed: inspected, quality-checked and ready to hand over.">
+            <text x="200" y="36" text-anchor="middle" class="f-complete">COMPLETED</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       ABOUT SECTION
+  ======================================================= -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="kicker">01 &nbsp;/&nbsp; About the Firm</p>
+      <h2 class="reveal">We don't just build structures. We build trust.</h2>
+      <p class="about-lede">
+        Building a home, commercial building or industrial project is more
+        than an investment — it's a long-term decision. From the first idea
+        and budget estimation to design, foundation, construction, quality
+        control and final execution, we work with our clients at every
+        important stage.
+      </p>
+      <div class="process-row">
+        <span>Understand</span><span class="arrow">&rarr;</span>
+        <span>Plan</span><span class="arrow">&rarr;</span>
+        <span>Design</span><span class="arrow">&rarr;</span>
+        <span>Build</span><span class="arrow">&rarr;</span>
+        <span>Inspect</span><span class="arrow">&rarr;</span>
+        <span>Deliver</span>
+      </div>
+      <div class="about-grid">
+        <p class="about-text">
+          Chakra Construction Pvt. Ltd. is a civil engineering and construction
+          company providing reliable construction solutions with a focus on
+          quality, technical accuracy, safety and professional project
+          management. We combine skilled engineering expertise, modern
+          construction equipment, advanced design software and practical site
+          experience to deliver residential, commercial and industrial
+          construction projects.
+        </p>
+        <ul class="fact-list">
+          <li><span>Location</span><strong>Baijanath-05, Banke</strong></li>
+          <li><span>Owner</span><strong>Sailesh Kunwar</strong></li>
+          <li><span>Founder</span><strong>Mukesh Kunwar</strong></li>
+          <li><span>Service areas</span><strong>Kohalpur, Nepalgunj, Dhangadhi, Ghorahi</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CONSTRUCTION STORY — INTERACTIVE TIMELINE
+       Click any step to see its description. script.js swaps
+       the active step and animates the progress line.
+  ======================================================= -->
+  <section id="story" class="section">
+    <div class="container">
+      <p class="kicker">01b &nbsp;/&nbsp; Our Process</p>
+      <h2 class="reveal">From plan to completed building</h2>
+
+      <div class="timeline" id="timeline">
+        <div class="timeline-track"><div class="timeline-progress" id="timelineProgress"></div></div>
+
+        <div class="timeline-steps" id="timelineSteps">
+          <button class="timeline-step active" data-index="0">
+            <span class="timeline-dot">1</span><span class="timeline-label">Plan</span>
+          </button>
+          <button class="timeline-step" data-index="1">
+            <span class="timeline-dot">2</span><span class="timeline-label">Architectural Design</span>
+          </button>
+          <button class="timeline-step" data-index="2">
+            <span class="timeline-dot">3</span><span class="timeline-label">3D Model</span>
+          </button>
+          <button class="timeline-step" data-index="3">
+            <span class="timeline-dot">4</span><span class="timeline-label">Foundation</span>
+          </button>
+          <button class="timeline-step" data-index="4">
+            <span class="timeline-dot">5</span><span class="timeline-label">Structure</span>
+          </button>
+          <button class="timeline-step" data-index="5">
+            <span class="timeline-dot">6</span><span class="timeline-label">Construction</span>
+          </button>
+          <button class="timeline-step" data-index="6">
+            <span class="timeline-dot">7</span><span class="timeline-label">Finishing</span>
+          </button>
+          <button class="timeline-step" data-index="7">
+            <span class="timeline-dot">8</span><span class="timeline-label">Completed Building</span>
+          </button>
+        </div>
+
+        <!-- One description panel per step. script.js shows only the
+             one matching the active step — data-index ties them together. -->
+        <div class="timeline-panel">
+          <p class="timeline-desc" data-index="0">Understanding the client's requirements, the site conditions, and an early budget estimate before any design work begins.</p>
+          <p class="timeline-desc" data-index="1" hidden>Working through layout, elevation and design options together with the client.</p>
+          <p class="timeline-desc" data-index="2" hidden>An early 3D model so the client can visualize the proposed building before construction starts.</p>
+          <p class="timeline-desc" data-index="3" hidden>Raft foundation, mat foundation and other foundation work suited to the site conditions.</p>
+          <p class="timeline-desc" data-index="4" hidden>Structural framing and reinforcement work carried out under engineering guidance.</p>
+          <p class="timeline-desc" data-index="5" hidden>Building construction with material quality control checked on site throughout.</p>
+          <p class="timeline-desc" data-index="6" hidden>Finishing work carried through toward final handover.</p>
+          <p class="timeline-desc" data-index="7" hidden>A completed, quality-checked building handed over to the client.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SERVICES SECTION
+  ======================================================= -->
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <p class="kicker">02 &nbsp;/&nbsp; Services</p>
+      <h2 class="reveal">What we deliver</h2>
+
+      <div class="service-grid">
+        <div class="service-card tilt-card reveal">
+          <h3>Construction &amp; Foundation Works</h3>
+          <p>Raft foundations, mat foundations, residential construction and other civil engineering works.</p>
+        </div>
+        <div class="service-card tilt-card reveal">
+          <h3>Property Valuation</h3>
+          <p>Professional property assessment and valuation to help clients understand a property's value and potential.</p>
+        </div>
+        <div class="service-card tilt-card reveal">
+          <h3>Residential Construction Budgeting</h3>
+          <p>Preliminary construction cost estimates to help clients plan before construction begins.</p>
+        </div>
+        <div class="service-card tilt-card reveal">
+          <h3>Material Quality Control</h3>
+          <p>Proper material selection, inspection and quality control maintained throughout the project.</p>
+        </div>
+        <div class="service-card tilt-card reveal">
+          <h3>Professional Engineering Guidance</h3>
+          <p>Technical guidance from our skilled engineering team, from planning through site execution.</p>
+        </div>
+        <div class="service-card tilt-card reveal">
+          <h3>3D Building Modeling</h3>
+          <p>Early-stage 3D building models so clients can visualize the proposed building before construction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       WHY CHOOSE US SECTION
+  ======================================================= -->
+  <section id="why" class="section section-alt">
+    <div class="container">
+      <p class="kicker">02b &nbsp;/&nbsp; Why Clients Can Trust Us</p>
+      <h2 class="reveal">Why clients can trust Chakra Construction</h2>
+
+      <div class="service-grid">
+        <div class="service-card tilt-card reveal">
+          <h3>🏗️ Engineering-Based Construction</h3>
+          <p>Professional engineering methods, surveying equipment, design software and structural analysis tools improve accuracy and project planning.</p>
+        </div>
+        <div class="service-card tilt-card reveal">
+          <h3>📐 Plan Before You Build</h3>
+          <p>Before construction begins, we help clients understand requirements, estimated budget, design possibilities and construction needs.</p>
+        </div>
+        <div class="service-card tilt-card reveal">
+          <h3>💰 Clear Cost Planning</h3>
+          <p>Preliminary construction cost estimates so clients can understand the expected investment and plan their budget effectively.</p>
+        </div>
+        <div class="service-card tilt-card reveal">
+          <h3>🧱 Quality-Focused Work</h3>
+          <p>Attention to construction materials, workmanship, foundation works, structural requirements and site quality throughout the project.</p>
+        </div>
+        <div class="service-card tilt-card reveal">
+          <h3>👷 Skilled Engineering Guidance</h3>
+          <p>Our technical team provides professional guidance throughout planning and construction, helping clients make informed decisions.</p>
+        </div>
+        <div class="service-card tilt-card reveal">
+          <h3>🏠 Visualize Your Future Home</h3>
+          <p>Preliminary 3D building models and architectural visualization show clients how their proposed building may look before construction.</p>
+        </div>
+        <div class="service-card tilt-card reveal">
+          <h3>🤝 Client Comes First</h3>
+          <p>Construction is a partnership — we listen to our clients, explain the process clearly, and keep communication open throughout.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       PROJECTS SECTION
+  ======================================================= -->
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="kicker">03 &nbsp;/&nbsp; Projects</p>
+      <h2 class="reveal">Current, upcoming and completed work</h2>
+
+      <div class="project-grid">
+
+        <!-- Current project -->
+        <article class="project-card tilt-card reveal">
+          <img src="assets/photos/jcb.jpg" alt="Excavator at the Jay Ambe Steels site">
+          <div class="project-card-body">
+            <span class="status status-current">Current</span>
+            <h3>Jay Ambe Steels</h3>
+            <p class="project-location">Wire Rod Mill (WRM) Project</p>
+            <p>Raft foundation, mat foundation and other structural foundation works for the Wire Rod Mill facility.</p>
+            <a href="#gallery" class="btn btn-small btn-outline">View Project</a>
+          </div>
+        </article>
+
+        <!-- Upcoming project -->
+        <article class="project-card tilt-card reveal">
+          <img src="assets/photos/placeholder.jpg" alt="Placeholder image for the upcoming Kohalpur project">
+          <div class="project-card-body">
+            <span class="status status-upcoming">Upcoming</span>
+            <h3>Building Construction</h3>
+            <p class="project-location">Kohalpur</p>
+            <p>Upcoming building construction project in Kohalpur. Photos and details will be added once available.</p>
+            <a href="#contact" class="btn btn-small btn-outline">Ask About This Project</a>
+          </div>
+        </article>
+
+        <!-- Completed project -->
+        <article class="project-card tilt-card reveal">
+          <img src="assets/photos/aerial.jpg" alt="Completed residential building site work in Kohalpur">
+          <div class="project-card-body">
+            <span class="status status-completed">Completed</span>
+            <h3>2-Storey Residential Building</h3>
+            <p class="project-location">Kohalpur</p>
+            <p>A completed 2-storey residential building, delivered from foundation through to finish.</p>
+            <a href="#gallery" class="btn btn-small btn-outline">View Project</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       BLUEPRINT vs REALITY — DRAG SLIDER
+       Left = the design drawing, right = the real photo.
+       TO USE YOUR OWN: replace the <svg class="drawing-art"> with
+       <img src="assets/photos/drawing-1.jpg" alt="..."> and change
+       the photo src. Both layers just need to be the same shape.
+  ======================================================= -->
+  <section id="reality" class="section">
+    <div class="container">
+      <p class="kicker">Designed &rarr; Engineered &rarr; Built</p>
+      <h2 class="reveal">Blueprint vs reality</h2>
+      <p class="about-lede">Drag the slider to move from the drawing to the site.</p>
+
+      <div class="compare" id="compare" style="--pos:50%">
+        <div class="compare-layer compare-drawing">
+          <svg class="drawing-art" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" aria-label="Illustrative foundation layout drawing">
+            <rect x="60" y="40" width="280" height="145"/>
+            <path d="M60 76H340M60 112H340M60 148H340M116 40V185M172 40V185M228 40V185M284 40V185"/>
+            <path d="M60 205H340M60 199V211M340 199V211"/>
+            <text x="200" y="222" text-anchor="middle">illustrative layout &mdash; replace with your drawing</text>
+          </svg>
+          <span class="compare-tag">Designed</span>
+        </div>
+        <div class="compare-layer compare-photo">
+          <img src="assets/photos/jcb.jpg" alt="Excavator digging a foundation trench on site" loading="lazy">
+          <span class="compare-tag right">Built</span>
+        </div>
+        <div class="compare-handle" aria-hidden="true"><span>&#8596;</span></div>
+        <input type="range" min="0" max="100" value="50" id="compareRange" aria-label="Drag to compare the drawing and the real site photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       INTERACTIVE SERVICE-AREA MAP
+       A schematic (not to scale, no border outline) placing each town
+       at its approximate relative position. Click a town.
+       Edit the "areas" list in script.js to add projects per town.
+  ======================================================= -->
+  <section id="map" class="section section-alt">
+    <div class="container">
+      <p class="kicker">Where we work</p>
+      <h2 class="reveal">Service areas across western Nepal</h2>
+      <div class="map-grid">
+        <div class="map-wrap">
+          <svg class="map-svg" viewBox="0 0 600 240" role="group" aria-label="Schematic map of Chakra Construction service areas">
+            <g class="contours" aria-hidden="true">
+              <path d="M20 40C120 10 260 30 380 14S560 20 590 34"/>
+              <path d="M20 62C130 34 270 54 390 38S560 44 590 58"/>
+              <path d="M20 84C140 58 280 78 400 62S560 68 590 82"/>
+            </g>
+            <g class="map-dot" data-area="Dhangadhi" tabindex="0" role="button" aria-label="Dhangadhi"><circle cx="103" cy="75" r="7"/><text x="103" y="58" text-anchor="middle">Dhangadhi</text></g>
+            <g class="map-dot" data-area="Kohalpur" tabindex="0" role="button" aria-label="Kohalpur"><circle cx="341" cy="153" r="7"/><text x="352" y="140" text-anchor="start">Kohalpur</text></g>
+            <g class="map-dot" data-area="Nepalgunj" tabindex="0" role="button" aria-label="Nepalgunj"><circle cx="326" cy="176" r="7"/><text x="316" y="200" text-anchor="end">Nepalgunj</text></g>
+            <g class="map-dot" data-area="Ghorahi" tabindex="0" role="button" aria-label="Ghorahi"><circle cx="514" cy="178" r="7"/><text x="514" y="202" text-anchor="middle">Ghorahi</text></g>
+          </svg>
+          <p class="mini-hint">Schematic only &mdash; positions are approximate and not to scale.</p>
+        </div>
+        <div class="map-panel" aria-live="polite">
+          <h3 id="mapTitle">Select a town</h3>
+          <p id="mapText">Tap a location to see our work there.</p>
+          <ul id="mapList"></ul>
+          <p class="mini-hint">Head office: Baijanath-05, Banke &middot; <a href="https://maps.app.goo.gl/VsYUtMRfF9ctFJDR6?g_st=ac" target="_blank" rel="noopener">Google Maps</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       ENGINEERING & MACHINERY SECTION
+  ======================================================= -->
+  <section id="engineering" class="section section-alt">
+    <div class="container">
+      <p class="kicker">04 &nbsp;/&nbsp; Engineering &amp; Machinery</p>
+      <h2 class="reveal">Software on the desk, machinery on the ground</h2>
+
+      <div class="eng-grid">
+        <div>
+          <h3 class="sub-heading">Engineering Tools</h3>
+          <div class="tag-row">
+            <span class="tag">Total Station</span>
+            <span class="tag">Auto Level</span>
+            <span class="tag">AutoCAD</span>
+            <span class="tag">Microsoft Excel</span>
+            <span class="tag">Autodesk Revit</span>
+            <span class="tag">STAAD.Pro</span>
+            <span class="tag">ETABS</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="sub-heading">Machinery &amp; Equipment</h3>
+          <p class="mini-hint">Tap a machine to read more about how we use it.</p>
+          <div class="machine-cards" id="machineCards">
+            <button class="machine-card">
+              <span class="machine-card-head"><span>Concrete Mixer</span><strong>× 2</strong></span>
+              <span class="machine-card-body">Used for on-site batch mixing of concrete for foundation and structural pours.</span>
+            </button>
+            <button class="machine-card">
+              <span class="machine-card-head"><span>Lift Concrete Mixer</span><strong>× 1</strong></span>
+              <span class="machine-card-body">A mixer fitted with a lift/hopper mechanism for raising and pouring mixed concrete on site.</span>
+            </button>
+            <button class="machine-card">
+              <span class="machine-card-head"><span>Hydraulic Concrete Mixer</span><strong>× 1</strong></span>
+              <span class="machine-card-body">A hydraulic mixer unit used for larger-volume concrete mixing and pouring during active pours.</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="machine-photos">
+        <img src="assets/photos/hydraulic.jpg" alt="Hydraulic concrete mixer with hopper">
+        <img src="assets/photos/jcb.jpg" alt="Excavator digging on site">
+        <img src="assets/photos/jcb2.jpg" alt="Excavator moving soil on site">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       GALLERY SECTION
+       Photos open in a simple lightbox (see script.js).
+       Videos use YouTube embeds so no large video files
+       need to be stored on the website itself.
+  ======================================================= -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <p class="kicker">05 &nbsp;/&nbsp; Gallery</p>
+      <h2 class="reveal">Photos &amp; videos</h2>
+
+      <h3 class="sub-heading">Photos</h3>
+      <div class="photo-grid" id="photoGrid">
+        <img src="assets/photos/hero.jpg" alt="Site engineers at Jay Ambe Steels" class="gallery-img">
+        <img src="assets/photos/jcb.jpg" alt="Excavator on site" class="gallery-img">
+        <img src="assets/photos/jcb2.jpg" alt="Excavator moving soil on site" class="gallery-img">
+        <img src="assets/photos/aerial.jpg" alt="Crew mixing concrete" class="gallery-img">
+        <img src="assets/photos/mixer.jpg" alt="Concrete mixer" class="gallery-img">
+        <img src="assets/photos/hydraulic.jpg" alt="Hydraulic concrete mixer" class="gallery-img">
+      </div>
+
+      <h3 class="sub-heading" style="margin-top:40px;">Videos</h3>
+      <div class="video-grid">
+        <!--
+          Real site clips. preload="none" means the browser only loads
+          the poster image until the visitor presses play — this is what
+          keeps the page fast even with several videos on it.
+          When YouTube links are available instead, replace a <video>
+          block with a .video-embed <div> containing an <iframe> (see
+          the commented example below).
+        -->
+        <video controls preload="none" poster="assets/videos/vid1-poster.jpg">
+          <source src="assets/videos/vid1.mp4" type="video/mp4">
+        </video>
+        <video controls preload="none" poster="assets/videos/vid2-poster.jpg">
+          <source src="assets/videos/vid2.mp4" type="video/mp4">
+        </video>
+        <video controls preload="none" poster="assets/videos/vid3-poster.jpg">
+          <source src="assets/videos/vid3.mp4" type="video/mp4">
+        </video>
+        <video controls preload="none" poster="assets/videos/vid4-poster.jpg">
+          <source src="assets/videos/vid4.mp4" type="video/mp4">
+        </video>
+        <video controls preload="none" poster="assets/videos/vid5-poster.jpg">
+          <source src="assets/videos/vid5.mp4" type="video/mp4">
+        </video>
+
+        <!--
+        YOUTUBE EXAMPLE (use this pattern once a video is on YouTube
+        instead of stored locally):
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+        </div>
+        -->
+      </div>
+
+      <!-- Lightbox overlay for enlarged photos, controlled by script.js -->
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+        <img src="" alt="" id="lightboxImg">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       TEAM SECTION
+  ======================================================= -->
+  <section id="team" class="section section-alt">
+    <div class="container">
+      <p class="kicker">06 &nbsp;/&nbsp; Team</p>
+      <h2 class="reveal">Who runs it</h2>
+
+      <div class="team-grid">
+        <div class="team-card tilt-card reveal">
+          <img src="assets/photos/owner.jpg" alt="Sailesh Kunwar, Owner">
+          <div>
+            <h3>Sailesh Kunwar</h3>
+            <p class="role">Owner</p>
+            <div class="team-links">
+              <a href="https://www.facebook.com/share/1JQG8hA2mm/" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://wa.me/9779802573272" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card tilt-card reveal">
+          <img src="assets/photos/founder.jpg" alt="Mukesh Kunwar, Founder">
+          <div>
+            <h3>Mukesh Kunwar</h3>
+            <p class="role">Founder</p>
+            <div class="team-links">
+              <a href="https://www.facebook.com/share/1MwVYQC6KN/" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://wa.me/9779804644984" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       VISION & PROMISE SECTION
+  ======================================================= -->
+  <section id="vision" class="section">
+    <div class="container">
+      <p class="kicker">06b &nbsp;/&nbsp; Our Vision</p>
+      <h2 class="reveal">To build a company Nepal can trust.</h2>
+      <p class="about-lede">
+        Chakra Construction Pvt. Ltd. is building toward a future where we are
+        recognized not simply as a construction company, but as a trusted
+        engineering and construction partner. We aim to gradually expand our
+        capabilities into larger residential, commercial, industrial and
+        infrastructure projects across Nepal — growing through quality work,
+        satisfied clients, skilled people, modern technology and strong
+        professional values.
+      </p>
+      <p class="vision-line">Every project builds our reputation.<br>Every client builds our future.</p>
+
+      <div class="promise-grid">
+        <div class="promise-item reveal">Quality in Every Detail.</div>
+        <div class="promise-item reveal">Honesty in Every Step.</div>
+        <div class="promise-item reveal">Engineering in Every Decision.</div>
+        <div class="promise-item reveal">Responsibility in Every Project.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       PROJECT PLANNING / INQUIRY FORM
+       A separate, more detailed form from the general Contact
+       form below — for someone ready to describe an actual
+       project rather than just ask a question.
+  ======================================================= -->
+  <section id="plan" class="section section-alt">
+    <div class="container">
+      <p class="kicker">06c &nbsp;/&nbsp; Plan Your Project</p>
+      <h2 class="reveal">Tell us what you're building</h2>
+      <p class="about-lede" style="margin-bottom:30px;">Share a few basics about your project and we'll follow up with a preliminary estimate and a site visit.</p>
+
+      <form id="planForm" class="contact-form plan-form" novalidate>
+        <label for="buildingType">Building Type</label>
+        <select id="buildingType" name="buildingType">
+          <option value="Residential">Residential</option>
+          <option value="Commercial">Commercial</option>
+          <option value="Industrial">Industrial</option>
+          <option value="Foundation Only">Foundation Only</option>
+        </select>
+
+        <label for="area">Approximate Building Area</label>
+        <input type="text" id="area" name="area" placeholder="e.g. 1800 sq. ft.">
+
+        <label for="planLocation">Location</label>
+        <input type="text" id="planLocation" name="planLocation" placeholder="e.g. Kohalpur, Banke" required>
+
+        <label for="requirements">Project Requirements</label>
+        <textarea id="requirements" name="requirements" rows="4" placeholder="Number of floors, rooms, timeline, anything else we should know" required></textarea>
+
+        <label class="checkbox-row"><input type="checkbox" name="wantsBudget" checked> Request a preliminary budget estimate</label>
+        <label class="checkbox-row"><input type="checkbox" name="wantsConsultation" checked> Request a consultation</label>
+
+        <button type="submit" class="btn btn-primary">Submit Project Inquiry</button>
+        <p class="form-status" id="planFormStatus" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CONTACT SECTION
+  ======================================================= -->
+  <section id="contact" class="section">
+    <div class="container">
+      <p class="kicker">07 &nbsp;/&nbsp; Contact</p>
+      <h2 class="reveal">Let's build your future together.</h2>
+      <p class="about-lede" style="margin-bottom:30px;">Whether you're planning a new home, commercial building, foundation, industrial project, or simply need professional construction guidance, our team is ready to discuss your requirements.</p>
+
+      <div class="contact-grid">
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:chakraconstructionpvtltd@gmail.com">chakraconstructionpvtltd@gmail.com</a></li>
+          <li><span>Phone — Owner</span><a href="https://wa.me/9779802573272" target="_blank" rel="noopener">9802573272</a></li>
+          <li><span>Phone / WhatsApp — Founder</span><a href="https://wa.me/9779804644984" target="_blank" rel="noopener">980-4644984</a></li>
+          <li><span>Location</span><a href="https://maps.app.goo.gl/VsYUtMRfF9ctFJDR6?g_st=ac" target="_blank" rel="noopener">Baijanath-05, Banke — View on Google Maps</a></li>
+        </ul>
+
+        <!--
+          CONTACT FORM
+          This is version 1: HTML/CSS/JS only, no backend yet.
+          script.js validates the fields, then opens the visitor's
+          email app pre-filled with their message (a "mailto:" submit).
+          When a backend is added later, this same form can be pointed
+          at a real API endpoint instead.
+        -->
+        <form id="contactForm" class="contact-form" novalidate>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+
+          <label for="projectType">Project Type</label>
+          <select id="projectType" name="projectType">
+            <option value="Residential">Residential</option>
+            <option value="Foundation">Foundation</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+  ======================================================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <img src="assets/logo/logo.jpg" alt="Chakra Construction logo" width="30" height="30">
+        <span>Chakra Construction Pvt. Ltd. &mdash; Baijanath-05, Banke</span>
+      </div>
+      <p>Kohalpur &middot; Nepalgunj &middot; Dhangadhi &middot; Ghorahi</p>
+    </div>
+  </footer>
+
+  <!-- ======================================================
+       FLOATING WHATSAPP BUTTON
+       Stays visible in the corner while scrolling, for a
+       one-tap way to reach the owner at any point on the page.
+  ======================================================= -->
+  <a href="https://wa.me/9779802573272" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">💬</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

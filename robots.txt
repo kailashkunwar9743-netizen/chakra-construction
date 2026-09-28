@@ -1,0 +1,9 @@
+# robots.txt for Chakra Construction Pvt. Ltd.
+# Allows all search engines to crawl the whole site.
+
+User-agent: *
+Allow: /
+
+# Update this line once the site is live at its real domain
+# (see the free .com.np domain guide we discussed).
+Sitemap: https://chakraconstruction.com.np/sitemap.xml
